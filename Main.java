@@ -3,7 +3,6 @@ import java.time.Instant;
 import java.util.Arrays;
 import java.util.Random;
 
-
 public class Main {
 
 	public static int SIZE = Integer.MAX_VALUE / 10000;
@@ -24,7 +23,7 @@ public class Main {
 		System.arraycopy(tableau, 0, tableauQuickSort, 0, SIZE);
 		int[] tableauSort = new int[SIZE];
 		System.arraycopy(tableau, 0, tableauSort, 0, SIZE);
-		
+
 		triSelection(tableauSelection);
 		triInsertion(tableauInsertion);
 		triBulles(tableauBulles);
@@ -96,10 +95,10 @@ public class Main {
 		long duration = Duration.between(start, end).toMillis();
 		System.out.println("Le tri à bulles a pris " + duration + " ms");
 	}
-	
+
 	public static void triQuickSort(int[] tableau) {
 		Instant start = Instant.now();
-		quicksort(tableau,0,SIZE-1);
+		quicksort(tableau, 0, SIZE - 1);
 		Instant end = Instant.now();
 		long duration = Duration.between(start, end).toMillis();
 		System.out.println("Le QuickSort a pris " + duration + " ms");
@@ -132,7 +131,7 @@ public class Main {
 			tableau[right] = tmp;
 		}
 	}
-	
+
 	public static void triJava(int[] tableau) {
 		Instant start = Instant.now();
 		Arrays.sort(tableau);
